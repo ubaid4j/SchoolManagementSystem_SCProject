@@ -2,11 +2,8 @@ package com.ubaid.app.controller;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.sql.SQLException;
 import java.util.Hashtable;
 import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,8 +35,8 @@ public class AppRequestHandler extends HttpServlet
 	{
 		super.init();		
 		classHash = new Hashtable<>();
-		classHash.put("sign_up", new SignUp());		
-		classHash.put("sign_in", new SignIn());
+		classHash.put("signIn", new SignUp());		
+		classHash.put("signUp", new SignIn());
 	}
 		
 	//when our container decides to eliminate the 
@@ -72,17 +69,28 @@ public class AppRequestHandler extends HttpServlet
 				RequestHandler handler = classHash.get(className);
 				
 				//getting JSON array from the request handler get method
-				array = handler.get(map);			
+				array = handler.get(map);	
+				
+				if(array == null)
+					throw new NullPointerException();
 			}
 			catch(NullPointerException exp)
 			{
-				
+				if(className.equals("signIn"))
+				{
+					request.getRequestDispatcher("src/option/options.html").include(request, response);									
+//					response.sendRedirect("src/option/options.html");
+					System.out.println("hahahahah");
+				}
 			}
 			
-			//after that, writer writes the JSON array to response
-			Writer writer = response.getWriter();
-			writer.write(array.toString());
-			writer.flush();
+			if(array != null)
+			{
+				//after that, writer writes the JSON array to response
+				Writer writer = response.getWriter();
+				writer.write(array.toString());
+				writer.flush();				
+			}
 			
 		}
 		catch(IOException exp)
