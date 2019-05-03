@@ -76,9 +76,11 @@ public class AppRequestHandler extends HttpServlet
 			}
 			catch(NullPointerException exp)
 			{
-				if(className == "signIn")
+				if(className.equals("signIn"))
 				{
-					request.getRequestDispatcher("src/index/options.html").include(request, response);									
+					request.getRequestDispatcher("src/option/options.html").include(request, response);									
+//					response.sendRedirect("src/option/options.html");
+					System.out.println("hahahahah");
 				}
 			}
 			
