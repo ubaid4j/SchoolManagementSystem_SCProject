@@ -1,0 +1,22 @@
+body{
+	background: url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=709&q=80);
+	padding-top: 100px;
+	background-size: 80% 80%;
+}
+
+.login-signup {
+	margin-top: 20px
+}
+
+.input-group-addon{
+	background: #1cb94e;
+	border:1px solid #1cb94e;
+	color:#fff;
+}
+
+.btn-green {
+    background-color: #1cb94e;
+    border-color: #1cb94e;
+    color: #fff;
+}
+
