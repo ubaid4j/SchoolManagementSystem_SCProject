@@ -35,8 +35,8 @@ public class AppRequestHandler extends HttpServlet
 	{
 		super.init();		
 		classHash = new Hashtable<>();
-		classHash.put("sign_up", new SignUp());		
-		classHash.put("sign_in", new SignIn());
+		classHash.put("signIn", new SignUp());		
+		classHash.put("signUp", new SignIn());
 	}
 		
 	//when our container decides to eliminate the 
@@ -69,17 +69,26 @@ public class AppRequestHandler extends HttpServlet
 				RequestHandler handler = classHash.get(className);
 				
 				//getting JSON array from the request handler get method
-				array = handler.get(map);			
+				array = handler.get(map);	
+				
+				if(array == null)
+					throw new NullPointerException();
 			}
 			catch(NullPointerException exp)
 			{
-				
+				if(className == "signIn")
+				{
+					request.getRequestDispatcher("src/index/options.html").include(request, response);									
+				}
 			}
 			
-			//after that, writer writes the JSON array to response
-			Writer writer = response.getWriter();
-			writer.write(array.toString());
-			writer.flush();
+			if(array != null)
+			{
+				//after that, writer writes the JSON array to response
+				Writer writer = response.getWriter();
+				writer.write(array.toString());
+				writer.flush();				
+			}
 			
 		}
 		catch(IOException exp)
