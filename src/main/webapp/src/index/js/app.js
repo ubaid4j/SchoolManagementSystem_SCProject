@@ -9,9 +9,6 @@ function signIn(){
 	$.post("/SMSSC/AppRequestHandler",
 	{
 		className: "signIn",
-	}, function()
-	{
-		
 	});
 	
 	

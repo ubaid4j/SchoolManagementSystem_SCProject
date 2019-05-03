@@ -6,6 +6,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -77,18 +78,22 @@ public class AppRequestHandler extends HttpServlet
 			}
 			catch(NullPointerException exp)
 			{
-				if(className.equals("signIn"))
-				{
+//				if(className.equals("signIn"))
+//				{
 //					request.getRequestDispatcher("src/option/options.html").include(request, response);									
-					
-					RequestDispatcher aDispatcher = request.getRequestDispatcher("/src/option/options.html");
-					aDispatcher.forward(request, response);
-					
-//					response.sendRedirect("This will be options page");
-					System.out.println("hahahahah");
+//					response.setContentType("text/html");
+//
+//					RequestDispatcher view = request.getRequestDispatcher("SMSSC/src/main/webapp/null.jsp");
+//					view.forward(request, response);
+//					
+//					System.out.println("hahahahah");
+//
+//
+//				}
+				
+				RequestDispatcher view = request.getRequestDispatcher("/null.jsp");
+				view.forward(request, response);
 
-
-				}
 			}
 			
 			if(array != null)
