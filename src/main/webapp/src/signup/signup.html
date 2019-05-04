@@ -24,7 +24,6 @@
 
 <!-- Custom styles for this template -->
 <link href="src/signup/assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body style="padding-top: 0px; background-size: 100% 100%;">
@@ -58,7 +57,7 @@
                   <label for="password">Name</label>
                   <div class="input-group input-group-lg">
                     <div style="background-color: rgb(123,104,238)" class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                    <input id="password" name="password" value="" class="form-control input-lg" required="" type="password">
+                    <input id="name" name="password" value="" class="form-control input-lg" required="" type="text">
                   </div>
                 </div>
               </div>
@@ -68,7 +67,7 @@
                   <label for="password">Email Address</label>
                   <div class="input-group input-group-lg">
                     <div style="background-color: rgb(123,104,238)" class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                    <input  id="password_confirm" name="password_confirm" class="form-control input-lg" required="" type="password">
+                    <input  id="email" name="password_confirm" class="form-control input-lg" required="" type="text-center">
                   </div>
                 </div>
               </div>
@@ -98,32 +97,10 @@
 
             <div class="row" style="margin-top: 20px;   ">
               <div class="col-md-6">
-                <div class="dropdown show" style="width: 100px">
-                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Gender
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="#">Male</a>
-                      <a class="dropdown-item" href="#">Female</a>
-                     
-                          </div>
-                        </div>
+              		<p>Gender: </p>
+           			<label class="radio-inline"><input type="radio" name="optradio" checked>Male</label>
+					<label class="radio-inline"><input type="radio" name="optradio">Female</label>
               </div>
-
-              <div class="col-md-6">
-                <div class="dropdown show">
-                  <a class="btn  btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    User Type
-                  </a>
-
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Teacher</a>
-                    <a class="dropdown-item" href="#">Student</a>
-                    <a class="dropdown-item" href="#">Admin</a>
-                  </div>
-                </div>
-            </div>
 
             <hr>
 
