@@ -52,7 +52,7 @@
         
 
           <hr>
-          <form method="post" action="" id="login-form" role="form">
+          <form method="post" action="/SMSSC/User" id="login-form" role="form">
             <div class="form-group">
               <label for="user_name">User Name</label>
               <div class="input-group  input-group-lg">
@@ -69,13 +69,17 @@
               </div>
             </div>
 
-            <div class="row checkbox">
-              <div class="col-md-6 col-sm-4 col-xs-6">
-                <label>
-                  <input name="autologin" type="checkbox"> Remember me
-                </label>
+            <div class="row" style="margin-top:20px;">
+              <div class="col-md-12">
+              	<div class="form-group">
+              		<p>Sign In As: </p>
+           			<label class="radio-inline"><input type="radio" name="userType" checked value="teacher">Teacher</label>
+					<label class="radio-inline"><input type="radio" name="userType" value="student">Student</label>
+					<label class="radio-inline"><input type="radio" name="userType" value="admin">Admin</label>
+              	</div>
               </div>
-            </div>
+
+
 
             <hr>
               <p><a href="">Forgot your password?</a></p>

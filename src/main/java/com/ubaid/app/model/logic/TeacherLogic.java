@@ -14,4 +14,10 @@ public class TeacherLogic implements Logic
 		return dao.add(user);
 	}
 
+	@Override
+	public User get(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

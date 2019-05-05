@@ -54,4 +54,10 @@ public class TeacherDAO implements DAO
 		}
 	}
 
+	@Override
+	public User getUser(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
