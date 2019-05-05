@@ -23,6 +23,30 @@
 		<description></description>
 		<servlet-class>com.ubaid.app.controller.routers.SignUp</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Option</servlet-name>
+		<display-name>Option</display-name>
+		<description></description>
+		<servlet-class>com.ubaid.app.controller.routers.Option</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SignUpData</servlet-name>
+		<display-name>SignUpData</display-name>
+		<description></description>
+		<servlet-class>com.ubaid.app.controller.routers.SignUpData</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SubmissionConfirm</servlet-name>
+		<display-name>SubmissionConfirm</display-name>
+		<description></description>
+		<servlet-class>com.ubaid.app.controller.routers.SubmissionConfirm</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<display-name>Home</display-name>
+		<description></description>
+		<servlet-class>com.ubaid.app.controller.routers.Home</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>AppRequestHandler</servlet-name>
@@ -35,6 +59,22 @@
 	<servlet-mapping>
 		<servlet-name>SignUp</servlet-name>
 		<url-pattern>/SignUp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Option</servlet-name>
+		<url-pattern>/Option</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SignUpData</servlet-name>
+		<url-pattern>/SignUpData</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SubmissionConfirm</servlet-name>
+		<url-pattern>/SubmissionConfirm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/Home</url-pattern>
 	</servlet-mapping>
 
 

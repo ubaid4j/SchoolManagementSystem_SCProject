@@ -49,7 +49,7 @@
           <h3> Create an account now</h3>
           <hr>
 
-          <form method="post" action="" id="signup-form" role="form">
+          <form method="post" action="/SMSSC/SubmissionConfirm" id="signup-form" role="form">
          
              <div class="row">
               <div class="col-md-6">
@@ -57,7 +57,7 @@
                   <label for="password">Name</label>
                   <div class="input-group input-group-lg">
                     <div style="background-color: rgb(123,104,238)" class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                    <input id="name" name="password" value="" class="form-control input-lg" required="" type="text">
+                    <input id="name" name="name" value="" class="form-control input-lg" required="" type="text">
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                   <label for="password">Email Address</label>
                   <div class="input-group input-group-lg">
                     <div style="background-color: rgb(123,104,238)" class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                    <input  id="email" name="password_confirm" class="form-control input-lg" required="" type="text-center">
+                    <input  id="email" name="email" class="form-control input-lg" required="" type="text-center">
                   </div>
                 </div>
               </div>
@@ -97,9 +97,11 @@
 
             <div class="row" style="margin-top: 20px;   ">
               <div class="col-md-6">
+              	<div class="form-group">
               		<p>Gender: </p>
-           			<label class="radio-inline"><input type="radio" name="optradio" checked>Male</label>
-					<label class="radio-inline"><input type="radio" name="optradio">Female</label>
+           			<label class="radio-inline"><input type="radio" name="gender" checked value="Male">Male</label>
+					<label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+              	</div>
               </div>
 
             <hr>
